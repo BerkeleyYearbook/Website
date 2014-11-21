@@ -1,0 +1,7 @@
+RewriteEngine On
+Options -Multiviews
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^store http://ybstore.friesens.com/stores/751713 [NC,R,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^.]+)/ /$1.html [NC,R,L]

@@ -26,9 +26,19 @@ a {
 		float:none;
 		outline:none;
 	}
+	nav li:hover {
+		color:rgba(255,255,255,0.8);
+	}
+body,.nav, a{
+	transition:			0.3s ease;
+	-webkit-transition:	0.3s ease;
+	-moz-transition:	0.3s ease;
+	-o-transition:		0.3s ease;
+}
 span, b {
 	float:none;
 }
+	b { font-weight:700 }
 section {
 	text-align:center;
 }
@@ -43,7 +53,11 @@ section {
 	font-size:13px;
 	letter-spacing:2px;
 	margin-top:35px;
+	line-height:150%;
 }
+	.button:hover {
+		background-color:rgba(77, 122, 255, 0.8);
+	}
 	header {
 		position:absolute;
 		top:0;
@@ -58,13 +72,49 @@ section {
 		margin-left:10px;
 	}
 		.box .bar {
-			height:3px;
+			height:2px;
 			width:100%;
 			margin-bottom:0;
 			margin-top:3px;
 			background-color:#FFF;
 			display:block;
 		}
+.nav {
+	position:fixed;
+	top:0;
+	left:100%;
+	background-color:#111;
+	color:#999;
+	font-size:1em;
+	text-transform:uppercase;
+	z-index:1500;
+	width:250px;
+	box-sizing:border-box;
+	padding:50px 40px;
+	bottom:0;
+}
+	.nav a {
+		padding:10px 0;
+		font-weight:300;
+	}
+		.nav b a {
+			font-weight:400;
+		}
+		.nav a:hover {
+			color:#FFF;
+		}
+	.nav li,.nav a {
+		width:100%;
+	}
+	.nav nav {
+		margin-top:20px;
+	}
+	.active .nav {
+		margin-left:-250px;
+	}
+	body.active {
+		margin-left:-250px;
+	}
 .wrap {
 	width:80%;
 	max-width:800px;
@@ -106,6 +156,9 @@ section {
 		.byline a {
 			border-bottom:1px dotted #fff;
 		}
+		.byline a:hover {
+			border-bottom:1px solid #FFF;
+		}
 header {
 	line-height:50px;
 }
@@ -123,7 +176,8 @@ header h1 {
 	header nav {
 		float:right;
 		color:#FFF;
-		font-size:20px;
+		font-size:1em;
+		text-transform:uppercase;
 	}
 		header li {
 			padding:0 10px;
@@ -240,8 +294,15 @@ footer {
 		font-size:1em;
 		font-weight:400;
 		margin:15px 0 5px 0;
+		font-weight:200;
+		font-size:1.5em;
 	}
 		footer p {
 			text-align:center;
 			color:#999;
+			font-size:1.25em;
+			font-weight:300;
+		}
+		footer p a:hover {
+			color:#FFF;
 		}
