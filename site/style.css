@@ -66,6 +66,9 @@ section {
 		z-index:1000;
 		box-sizing:border-box;
 	}
+		header img,footer img {
+			height:50px;
+		}
 	.box {
 		width:20px;
 		margin-top:17px;
