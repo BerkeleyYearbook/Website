@@ -66,7 +66,7 @@ section {
 		z-index:1000;
 		box-sizing:border-box;
 	}
-		header img,footer img {
+		header img,footer img,.nav img {
 			height:50px;
 		}
 	.box {
@@ -308,4 +308,19 @@ footer {
 		}
 		footer p a:hover {
 			color:#FFF;
+		}
+	footer .socialmedia img {
+		height:25px;
+		margin-top:20px;
+		opacity:0.5;
+	}
+		footer a + a img {
+			margin-left:20px;
+		}
+		footer .socialmedia img:hover {
+			opacity:1;
+		}
+		footer .hours {
+			color:#666;
+			font-size:0.75em;
 		}
