@@ -58,7 +58,7 @@ include 'nav.php';
 				<h2>Preview <b>your</b> yearbook.</h2>
 				<div class="copy">
 					<p>Want to preview the Yearbook before purchasing?  Here are some sample spreads from the 2012 Yearbook, Anatomy of a Golden Bear.</p>
-					<a class="button" href="#">View Spreads</a>
+					<a class="button" href="/sample">View Spreads</a>
 				</div>
 			</div>
 		</section>
@@ -68,15 +68,15 @@ include 'nav.php';
 				<div class="items">
 					<div class="item">
 						<h3>senior portrait</h3>
-						<a class="button inverted" href="#">Make Appointment</a>
+						<a class="button inverted" href="/portrait">Make Appointment</a>
 					</div>
 					<div class="item">
 						<h3>student group</h3>
-						<a class="button inverted" href="#">Send Information</a>
+						<a class="button inverted" href="/group">Send Information</a>
 					</div>
 					<div class="item">
 						<h3>coverage idea</h3>
-						<a class="button inverted" href="#">Tell the Story</a>
+						<a class="button inverted" href="mailto:info@yearbook.berkeley.edu">Tell the Story</a>
 					</div>
 				</div>
 			</div>

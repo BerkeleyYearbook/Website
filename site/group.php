@@ -36,15 +36,15 @@ include 'nav.php';
 				<!-- <p class="byline">Are you a <a href="#">student group</a>? A <a href="#">senior</a>? A <a href="#">Yearbook-swag</a>-seeking shopper? -->
 			</div>
 		</section>
-		<a href="#" class="banner">
+		<a href="http://tinyurl.com/bgclubs15" class="banner">
 			<p>Get started. Get in the yearbook. <span class="arrow right"><span class="leg"></span></span></p>
 		</a>
 		<section class="text">
 			<div class="wrap">
 				<h2>Talk with Us</h2>
 				<div class="copy">
-					<p>Your group could be featured as: (1) a module or (2) a double-page spread. <!-- <a href="#">Fill out the form</a> today, and we\'ll let you know.</p> -->
-					<p class="light">(more details coming soon)</p>
+					<p>Your group could be featured in the 2015 Blue&Gold Yearbook. <a href="http://tinyurl.com/bgclubs15">Fill out the form</a> today, and we\'ll let you know.</p>
+					<!-- <p class="light">(more details coming soon)</p> -->
 				</div>
 			</div>
 		</section>';
