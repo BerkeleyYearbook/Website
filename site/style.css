@@ -29,7 +29,7 @@ a {
 	nav li:hover {
 		color:rgba(255,255,255,0.8);
 	}
-body,.nav, a{
+body,.nav, a, .mask {
 	transition:			0.3s ease;
 	-webkit-transition:	0.3s ease;
 	-moz-transition:	0.3s ease;
@@ -324,3 +324,41 @@ footer {
 			color:#666;
 			font-size:0.75em;
 		}
+.photo {
+	border-radius:50%;
+	height:200px;
+	width:200px;
+	overflow:hidden;
+}
+	.mask, .mask img {
+		width:100%;
+		display:inline-block;
+		float:left;
+	}
+		.caption {
+			padding:25px;
+			width:100%;
+			box-sizing:border-box;
+		}
+		.person-name {
+			font-size:1.5em;
+		}
+		.person-title {
+			font-size:0.75em;
+			text-transform:uppercase;
+			font-weight:700;
+		}
+	.person:hover .mask {
+		margin-top:-10%;
+		margin-left:-10%;
+		width:120%;
+		height:auto;
+	}
+	.person {
+		width:33%;
+		margin:30px 0;
+		text-align:center;
+	}
+	.copy + h2 {
+		margin-top:60px;
+	}

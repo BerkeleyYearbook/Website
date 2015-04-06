@@ -1,4 +1,44 @@
 <?php
+// filetypes to display
+$imagetypes = array("image/jpeg", "image/gif");
+	// Original PHP code by Chirp Internet: www.chirp.com.au
+  // Please acknowledge use of this code by including this header.
+
+function getImages($dir) {
+	global $imagetypes;
+	
+	// array to hold return value
+	$retval = array();
+	
+	// add trailing slash if missing
+	if(substr($dir, -1) != "/") $dir .= "/";
+	
+	// full server path to directory
+	$fulldir = "{$_SERVER['DOCUMENT_ROOT']}/$dir";
+	
+	$d = @dir($fulldir) or die("getImages: Failed opening directory $dir for reading");
+	while(false !== ($entry = $d->read())) {
+	  // skip hidden files
+	  if($entry[0] == ".") continue;
+	
+	  // check for image files
+	  $f = escapeshellarg("$fulldir$entry");
+	  $mimetype = trim(`file -bi $f`);
+	  foreach($imagetypes as $valid_type) {
+		if(preg_match("@^{$valid_type}@", $mimetype)) {
+		  $retval[] = array(
+		   'file' => "/$dir$entry",
+		   'size' => getimagesize("$fulldir$entry"),
+		   'name' => $entry
+		  );
+		  break;
+		}
+	  }
+	}
+	$d->close();
+	
+	return $retval;
+}
 echo '<html>
 	<head>
 		<title>About | Blue and Gold Yearbook</title>
@@ -41,6 +81,28 @@ echo '<html>
 				<div class="copy">
 					<p>The Blue &amp; Gold Yearbook is the official yearbook for the University of California, Berkeley. Published since 1875, we provide readers coverage of events, issues and trends within the Berkeley community. As a historical record, the yearbook also includes campus facts, figures and people, including a section for graduating seniors\' portraits and majors.</p>
 				</div>
+				<h2>Staff</h2>';
+				// fetch image details
+                  $images = getImages("http://bgyearbook.com/images/staff/2014/");
+
+				// display on page
+				foreach($images as $img) {
+					$filename = $img['name'];
+					$arr = explode('_',$filename);
+					$name = $arr[0];
+					$position = $arr[1];
+				echo '
+				<div class="person">
+					<div class="photo">
+						<span class="mask"><img src="'.$img['file'].'"></span>
+					</div>
+					<div class="caption">
+						<h3 class="person-name">'.$name.'</h3>
+						<p class="person-title">'.$position.'</p>
+					</div>
+				</div>';
+				}
+				echo '
 			</div>
 		</section>';
 		include 'footer.php';
