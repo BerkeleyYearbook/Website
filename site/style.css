@@ -124,6 +124,35 @@ section {
 	display:inline-block;
 	float:none;
 }
+.team {
+    text-align: left;
+    font-weight: 300;
+    font-size: x-large;
+    margin-bottom: 25px;
+    position: relative;
+}
+.team_title {
+	float: none;
+    text-align: left;
+    font-weight: 300;
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+.team_description {
+	float: none;
+}
+.bullet_point {
+	position: absolute;
+	font-weight: 100;
+}
+.team_text {
+	padding-left: 25px;
+	font-size: medium;
+	font-weight: 300;
+}
+.join_a_team {
+	float: none;
+}
 .title {
 	color:#FFF;
 	font-weight:100;
