@@ -32,7 +32,7 @@ echo '<html>
 include 'nav.php';
 	echo '<section class="intro" style="background:url(\'images/group-01.png\') #333 no-repeat center; background-size:cover">
 			<div class="wrap">
-				<h1 class="title">Feature your <span>group</span>.</h1>
+				<h1 class="title">Feature yours <span>group</span>.</h1>
 				<!-- <p class="byline">Are you a <a href="#">student group</a>? A <a href="#">senior</a>? A <a href="#">Yearbook-swag</a>-seeking shopper? -->
 			</div>
 		</section>
