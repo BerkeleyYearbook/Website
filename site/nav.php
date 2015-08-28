@@ -3,6 +3,7 @@
 			<nav>
 				<ul>
 					<li><b><a href="/">home</a></b></li>
+					<li><b><a href="join">join</a><b></li>
 					<li><b><a href="store">store</a></b></li>
 					<li><b><a href="group">group</a></b></li>
 					<li><b><a href="portrait">portrait</a></b></li>

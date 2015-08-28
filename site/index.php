@@ -14,6 +14,7 @@ echo '
 			<h1><a href="/"><img src="images/logo.png"><span>Blue and Gold Yearbook</span></a></h1>
 			<nav>
 				<ul>
+					<li><a href="join">join</a></li>
 					<li><a href="group">group</a></li>
 					<li><a href="portrait">portrait</a></li>
 					<li><a href="store">store</a></li>
